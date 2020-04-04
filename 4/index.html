@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .row {
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .col6 {
+            width: 30%;
+            border: 2px solid black;
+            
+        }
+
+        @media screen  and (max-width: 600px){
+            .row {
+            display: flex;
+            flex-direction: column;
+            /* justify-content: space-evenly; */
+            
+        }
+        .col6 {
+            width: 98%;
+            border: 2px solid black;
+            margin: 1%;
+        }
+        }
+    </style>
+</head>
+<body>
+   <div class="row">
+    <div class="col6">
+        <div>
+            <img src="https://cdn.pixabay.com/photo/2018/01/12/10/19/fantasy-3077928__340.jpg" width="100%" >
+       <p style="padding: 2%;"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt vitae sapiente ea fugiat eaque optio voluptate, incidunt eum soluta quibusdam repudiandae excepturi, vero tempore. Natus est vitae maxime quo inventore! <a href="#">Read more</a></p>
+        </div>
+    </div>
+    <div class="col6">
+        <div>
+            <img src="https://cdn.pixabay.com/photo/2018/01/12/10/19/fantasy-3077928__340.jpg" width="100%" >
+       <p style="padding: 2%;"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt vitae sapiente ea fugiat eaque optio voluptate, incidunt eum soluta quibusdam repudiandae excepturi, vero tempore. Natus est vitae maxime quo inventore! <a href="#">Read more</a></p>
+        </div>
+    </div>
+    <div class="col6">
+        <div>
+            <img src="https://cdn.pixabay.com/photo/2018/01/12/10/19/fantasy-3077928__340.jpg" width="100%" >
+       <p style="padding: 2%;"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt vitae sapiente ea fugiat eaque optio voluptate, incidunt eum soluta quibusdam repudiandae excepturi, vero tempore. Natus est vitae maxime quo inventore! <a href="#">Read more</a></p>
+        </div>
+    </div>
+    
+   </div> 
+</body>
+</html>
