@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="container">
+        <h2>Todo List</h2>
+        <input type="text" class="input" placeholder="Add task">
+        <div class="notcomplete">
+            <h3>Todays Task</h3>
+
+        </div>
+        <br>
+        <hr>
+        <div class="complete">
+            <h3>Done</h3>
+
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+        $(".input").on("keyup", function(e) {
+            if(e.keyCode == 13 && $(".input").val()  != "") {
+                var task = $("<div class='task'> </div>").text($(".input").val());
+                var del = $("<i class='fa fa-trash'> </i >").click(function() {
+
+                    var p = $(this).parent();
+                    p.fadeOut(function() {
+                        p.remove();
+                    })
+                });
+                var check = $("<i class='fa fa-check'> </i >").click(function() {
+                    var p = $(this).parent();
+                    p.fadeOut(function() {
+                       $(".complete").append(p);
+                       p.fadeIn();
+                    });
+                    $(this).remove();
+                });
+
+                task.append(del,check)
+                $(".notcomplete").append(task);
+
+                $(".input").val("")
+            }
+            // alert('dd') 
+
+        })
+    </script>
+</body>
+</html>
