@@ -144,38 +144,7 @@
 			padding: 2.5em;
 		}
 
-		/*BUTTON*/
-		.btn {
-			padding: 5px 15px;
-			display: inline-block;
-		}
-
-		.btn.btn-primary {
-			border-radius: 5px;
-			background: #ED1C24;
-			color: #ffffff;
-		}
-
-		.btn.btn-white {
-			border-radius: 5px;
-			background: #ffffff;
-			color: #000000;
-		}
-
-		.btn.btn-white-outline {
-			border-radius: 5px;
-			background: transparent;
-			border: 1px solid #fff;
-			color: #fff;
-		}
-
-		.btn.btn-black-outline {
-			border-radius: 0px;
-			background: transparent;
-			border: 2px solid #000;
-			color: #000;
-			font-weight: 700;
-		}
+		
 
 		h1,
 		h2,
@@ -205,123 +174,21 @@
 
 		/*LOGO*/
 
-		.logo h1 {
-			margin: 0;
-		}
-
-		.logo h1 a {
-			color: #000000;
-			font-size: 20px;
-			font-weight: 700;
-			text-transform: uppercase;
-			font-family: 'Lato', sans-serif;
-			border: 2px solid #000;
-			padding: .2em 1em;
-		}
-
-		.navigation {
-			padding: 0;
-			padding: 1em 0;
-			/*background: rgba(0,0,0,1);*/
-			border-top: 1px solid rgba(0, 0, 0, .05);
-			border-bottom: 1px solid rgba(0, 0, 0, .05);
-		}
-
-		.navigation li {
-			list-style: none;
-			display: inline-block;
-			;
-			margin-left: 5px;
-			margin-right: 5px;
-			font-size: 13px;
-			font-weight: 500;
-			text-transform: uppercase;
-			letter-spacing: 2px;
-		}
-
-		.navigation li a {
-			color: rgba(0, 0, 0, 1);
-		}
-
-		/*HERO*/
-		.hero {
-			position: relative;
-			z-index: 0;
-		}
-
-		.hero .text {
-			color: rgba(0, 0, 0, .3);
-		}
-
-		.hero .text h2 {
-			color: #000;
-			font-size: 30px;
-			margin-bottom: 0;
-			font-weight: 300;
-		}
+		
 
 		.hero .text h3 span {
 			font-weight: 600;
 			color: #ED1C24;
 		}
 
-
-		/*HEADING SECTION*/
-		.heading-section {}
-
-		.heading-section h2 {
-			color: #000000;
-			font-size: 28px;
-			margin-top: 0;
-			line-height: 1.4;
-			font-weight: 400;
+		h3.price {
+			margin-top: 10px;
+			font-weight: 600;
+			color: #ED1C24;
 		}
 
-		.heading-section .subheading {
-			margin-bottom: 20px !important;
-			display: inline-block;
-			font-size: 13px;
-			text-transform: uppercase;
-			letter-spacing: 2px;
-			color: rgba(0, 0, 0, .4);
-			position: relative;
-		}
 
-		.heading-section .subheading::after {
-			position: absolute;
-			left: 0;
-			right: 0;
-			bottom: -10px;
-			content: '';
-			width: 100%;
-			height: 2px;
-			background: #ED1C24;
-			margin: 0 auto;
-		}
-
-		.heading-section-white {
-			color: rgba(255, 255, 255, .8);
-		}
-
-		.heading-section-white h2 {
-			font-family:
-				line-height: 1;
-			padding-bottom: 0;
-		}
-
-		.heading-section-white h2 {
-			color: #ffffff;
-		}
-
-		.heading-section-white .subheading {
-			margin-bottom: 0;
-			display: inline-block;
-			font-size: 13px;
-			text-transform: uppercase;
-			letter-spacing: 2px;
-			color: rgba(255, 255, 255, .4);
-		}
-
+		
 
 		ul.social {
 			padding: 0;
@@ -338,6 +205,7 @@
 			border-top: 1px solid rgba(0, 0, 0, .05);
 			color: rgba(0, 0, 0, .5);
 		}
+		
 
 		.footer .heading {
 			color: #000;
@@ -358,8 +226,20 @@
 			color: rgba(0, 0, 0, 1);
 		}
 
+		.mobile {
+			display: none;
+		}
 
-		@media screen and (max-width: 500px) {}
+		@media screen and (max-width: 500px) {
+			.mobile {
+				display: block;
+			}
+
+			.web {
+				display: none;
+			}
+		}
+
 	</style>
 
 
@@ -373,14 +253,14 @@
 		</div>
 		<div style="max-width: 600px; margin: 0 auto;" class="email-container">
 			<!-- BEGIN BODY -->
-			<table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"
+			<table align="center" class="web" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"
 				style="margin: auto;">
 				<tr>
 					<td valign="top" class="bg_white" style="padding: 1em 2.5em 0 2.5em;">
 						<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
 							<tr>
 								<td class="" style="text-align: center;">
-									<a href="#"><img src="images/logo.png" alt=""></a>
+									<a href="https://netzary.com"><img src="images/logo.png" alt=""></a>
 								</td>
 							</tr>
 						</table>
@@ -400,6 +280,8 @@
 						</table>
 					</td>
 				</tr><!-- end tr -->
+
+				<!-- laptops section  -->
 				<tr>
 					<td class="bg_white">
 						<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
@@ -414,13 +296,18 @@
 														<td class="text-services"
 															style="text-align: left; padding: 20px 30px;">
 															<div class="heading-section">
-																<h2 style="font-size: 22px;">Young Woman Dress</h2>
-																<p>Dell Inspiron 15 is a Windows 10 Home laptop with a
-																	15.60-inch display that has a resolution of
-																	1920x1080 pixels. It is powered by a Core i5
-																	processor and it comes with 8GB of RAM. The Dell
-																	Inspiron 15 packs 1TB of HDD storage.</p>
-																<p><a href="#" class="btn btn-primary">Shop now</a></p>
+																<h2 style="font-size: 22px;">Dell Latitude 3400</h2>
+																<li> Intel Core i5-8265U 8th gen Processor</li>
+																<li> 4GB DDR4 2666 MHz RAM</li>
+																<li> 1TB SATA HDD</li>
+																<li> No ODD</li>
+																<li> Ubuntu OS</li>
+																<li> 14" HD Screen</li>
+																<li> 3 Year Onsite Warranty + ADP</li>
+																<li> Backpack</li>
+
+
+																<h3 class="price">Price: 48000 + 18% GST</h3>
 															</div>
 														</td>
 													</tr>
@@ -431,7 +318,7 @@
 													width="100%">
 													<tr>
 														<td>
-															<img src="images/laptop.png" alt=""
+															<img src="images/first.jpg" alt=""
 																style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;">
 														</td>
 													</tr>
@@ -441,10 +328,515 @@
 									</table>
 								</td>
 							</tr><!-- end: tr -->
+
 						</table>
 					</td>
 				</tr><!-- end:tr -->
-				<!-- 1 Column Text + Button : END -->
+
+				<tr>
+					<td class="bg_white">
+						<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+							<tr>
+								<td class="bg_light email-section" style="padding: 0; width: 100%;">
+									<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+										<tr>
+											<td valign="middle" width="50%">
+												<table role="presentation" cellspacing="0" cellpadding="0" border="0"
+													width="100%">
+													<tr>
+														<td>
+															<img src="images/second.jpg" alt=""
+																style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;">
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td valign="middle" width="50%">
+												<table role="presentation" cellspacing="0" cellpadding="0" border="0"
+													width="100%">
+													<tr>
+														<td class="text-services"
+															style="text-align: left; padding: 20px 30px;">
+															<div class="heading-section">
+																<h2 style="font-size: 22px;">Dell Latitude 3400</h2>
+																<li> Intel Core i5-8265U 8th gen Processor</li>
+																<li> 4GB DDR4 2666 MHz RAM</li>
+																<li> 1TB SATA HDD</li>
+																<li> No ODD</li>
+																<li> Windows 10 Pro OS</li>
+																<li> 14" HD Screen</li>
+																<li> 3 Year Onsite Warranty + ADP</li>
+																<li> Backpack</li>
+																<h3 class="price">Price: 55500 + 18% GST</h3>
+															</div>
+														</td>
+													</tr>
+												</table>
+											</td>
+
+										</tr>
+									</table>
+								</td>
+							</tr><!-- end: tr -->
+
+						</table>
+					</td>
+				</tr><!-- end:tr -->
+
+				<tr>
+					<td class="bg_white">
+						<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+							<tr>
+								<td class="bg_light email-section" style="padding: 0; width: 100%;">
+									<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+										<tr>
+											<td valign="middle" width="50%">
+												<table role="presentation" cellspacing="0" cellpadding="0" border="0"
+													width="100%">
+													<tr>
+														<td class="text-services"
+															style="text-align: left; padding: 20px 30px;">
+															<div class="heading-section">
+																<h2 style="font-size: 22px;">Dell Optiplex 5070MT</h2>
+																<li>Intel Core i5-9500 9th gen Processor</li>
+																<li>4GB DDR4 RAM</li>
+																<li>1TB SATA HDD</li>
+																<li>DVD RW</li>
+																<li>USB Keyboard and Mouse</li>
+																<li>Ubuntu OS</li>
+																<li>19" Monitor</li>
+																<li>3 Year Onsite Warranty</li>
+																<h3 class="price">Price: 39500 + 18% GST</h3>
+															</div>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td valign="middle" width="50%">
+												<table role="presentation" cellspacing="0" cellpadding="0" border="0"
+													width="100%">
+													<tr>
+														<td>
+															<img src="images/third.png" alt=""
+																style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;">
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr><!-- end: tr -->
+
+						</table>
+					</td>
+				</tr><!-- end:tr -->
+
+				<tr>
+					<td class="bg_white">
+						<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+							<tr>
+								<td class="bg_light email-section" style="padding: 0; width: 100%;">
+									<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+										<tr>
+											<td valign="middle" width="50%">
+												<table role="presentation" cellspacing="0" cellpadding="0" border="0"
+													width="100%">
+													<tr>
+														<td>
+															<img src="images/third.png" alt=""
+																style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;">
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td valign="middle" width="50%">
+												<table role="presentation" cellspacing="0" cellpadding="0" border="0"
+													width="100%">
+													<tr>
+														<td class="text-services"
+															style="text-align: left; padding: 20px 30px;">
+															<div class="heading-section">
+																<h2 style="font-size: 22px;">Dell Optiplex 5070MT</h2>
+
+																<li>Intel Core i5-9500 9th gen Processor</li>
+																<li>4GB DDR4 RAM</li>
+																<li>1TB SATA HDD</li>
+																<li>DVD RW</li>
+																<li>USB Keyboard and Mouse</li>
+																<li>Windows 10 pro OS</li>
+																<li>19" Monitor</li>
+																<li>3 Year Onsite Warranty</li>
+																<h3 class="price">Price: 48250 + 18% GST</h3>
+															</div>
+														</td>
+													</tr>
+												</table>
+											</td>
+
+										</tr>
+									</table>
+								</td>
+							</tr><!-- end: tr -->
+
+						</table>
+					</td>
+				</tr><!-- end:tr -->
+
+				<tr>
+					<td class="bg_white">
+						<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+							<tr>
+								<td class="bg_light email-section" style="padding: 0; width: 100%;">
+									<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+										<tr>
+											<td valign="middle" width="50%">
+												<table role="presentation" cellspacing="0" cellpadding="0" border="0"
+													width="100%">
+													<tr>
+														<td class="text-services"
+															style="text-align: left; padding: 20px 30px;">
+															<div class="heading-section">
+																<h2 style="font-size: 22px;">Dell Vostro 3490 Laptop
+																</h2>
+
+																<li> Intel Core i5-10210U 10th gen Processor (6MB Cache,
+																	up
+																	to
+
+																	4.2 GHz)</li>
+																<li> 8GB DDR4 2666 MHz RAM</li>
+																<li> 256GB SSD</li>
+																<li> No ODD</li>
+																<li> Windows 10 Pro OS</li>
+																<li> 14" FHD Screen</li>
+																<li> 3-year Pro Support</li>
+																<li> Backpack</li>
+																<h3 class="price">Price: 51000 + 18% GST</h3>
+															</div>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td valign="middle" width="50%">
+												<table role="presentation" cellspacing="0" cellpadding="0" border="0"
+													width="100%">
+													<tr>
+														<td>
+															<img src="images/fifth.png" alt=""
+																style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;">
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr><!-- end: tr -->
+
+						</table>
+					</td>
+				</tr><!-- end:tr -->
+
+			</table>
+
+			<!-- BEGIN BODY -->
+			<table align="center" class="mobile" class="web" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"
+				style="margin: auto;">
+				<tr>
+					<td valign="top" class="bg_white" style="padding: 1em 2.5em 0 2.5em;">
+						<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+							<tr>
+								<td class="" style="text-align: center;">
+									<a href="https://netzary.com"><img src="images/logo.png" alt=""></a>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr><!-- end tr -->
+				<tr>
+					<td valign="middle" class="hero hero-2 bg_white" style="padding: 2em 0 4em 0;">
+						<table>
+							<tr>
+								<td>
+									<div class="text" style="padding: 0 2.5em; text-align: center;">
+										<h3>We Are Selling Laptop That Gives You An Affordable <span>Prices</span>
+											&amp; <span>Discount</span></h3>
+									</div>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr><!-- end tr -->
+
+				<!-- laptops section  -->
+				<tr>
+					<td class="bg_white">
+						<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+							<tr>
+								<td class="bg_light email-section" style="padding: 0; width: 100%;">
+									<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+										<tr>
+											<td valign="middle">
+												<table role="presentation" cellspacing="0" cellpadding="0" border="0"
+													width="100%">
+													<tr>
+														<td>
+															<img src="images/first.jpg" alt=""
+																style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;">
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td valign="middle">
+												<table role="presentation" cellspacing="0" cellpadding="0" border="0"
+													width="100%">
+													<tr>
+														<td class="text-services"
+															style="text-align: left; padding: 20px 30px;">
+															<div class="heading-section">
+																<h2 style="font-size: 22px;">Dell Latitude 3400</h2>
+																<li> Intel Core i5-8265U 8th gen Processor</li>
+																<li> 4GB DDR4 2666 MHz RAM</li>
+																<li> 1TB SATA HDD</li>
+																<li> No ODD</li>
+																<li> Ubuntu OS</li>
+																<li> 14" HD Screen</li>
+																<li> 3 Year Onsite Warranty + ADP</li>
+																<li> Backpack</li>
+
+
+																<h3 class="price">Price: 48000 + 18% GST</h3>
+															</div>
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr><!-- end: tr -->
+
+						</table>
+					</td>
+				</tr><!-- end:tr -->
+
+				<tr>
+					<td class="bg_white">
+						<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+							<tr>
+								<td class="bg_light email-section" style="padding: 0; width: 100%;">
+									<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+										<tr>
+											<td valign="middle">
+												<table role="presentation" cellspacing="0" cellpadding="0" border="0"
+													width="100%">
+													<tr>
+														<td>
+															<img src="images/second.jpg" alt=""
+																style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;">
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td valign="middle">
+												<table role="presentation" cellspacing="0" cellpadding="0" border="0"
+													width="100%">
+													<tr>
+														<td class="text-services"
+															style="text-align: left; padding: 20px 30px;">
+															<div class="heading-section">
+																<h2 style="font-size: 22px;">Dell Latitude 3400</h2>
+																<li> Intel Core i5-8265U 8th gen Processor</li>
+																<li> 4GB DDR4 2666 MHz RAM</li>
+																<li> 1TB SATA HDD</li>
+																<li> No ODD</li>
+																<li> Windows 10 Pro OS</li>
+																<li> 14" HD Screen</li>
+																<li> 3 Year Onsite Warranty + ADP</li>
+																<li> Backpack</li>
+																<h3 class="price">Price: 55500 + 18% GST</h3>
+															</div>
+														</td>
+													</tr>
+												</table>
+											</td>
+
+										</tr>
+									</table>
+								</td>
+							</tr><!-- end: tr -->
+
+						</table>
+					</td>
+				</tr><!-- end:tr -->
+
+				<tr>
+					<td class="bg_white">
+						<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+							<tr>
+								<td class="bg_light email-section" style="padding: 0; width: 100%;">
+									<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+										<tr>
+											<td valign="middle">
+												<table role="presentation" cellspacing="0" cellpadding="0" border="0"
+													width="100%">
+													<tr>
+														<td>
+															<img src="images/third.png" alt=""
+																style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;">
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td valign="middle">
+												<table role="presentation" cellspacing="0" cellpadding="0" border="0"
+													width="100%">
+													<tr>
+														<td class="text-services"
+															style="text-align: left; padding: 20px 30px;">
+															<div class="heading-section">
+																<h2 style="font-size: 22px;">Dell Optiplex 5070MT</h2>
+																<li>Intel Core i5-9500 9th gen Processor</li>
+																<li>4GB DDR4 RAM</li>
+																<li>1TB SATA HDD</li>
+																<li>DVD RW</li>
+																<li>USB Keyboard and Mouse</li>
+																<li>Ubuntu OS</li>
+																<li>19" Monitor</li>
+																<li>3 Year Onsite Warranty</li>
+																<h3 class="price">Price: 39500 + 18% GST</h3>
+															</div>
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr><!-- end: tr -->
+
+						</table>
+					</td>
+				</tr><!-- end:tr -->
+
+				<tr>
+					<td class="bg_white">
+						<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+							<tr>
+								<td class="bg_light email-section" style="padding: 0; width: 100%;">
+									<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+										<tr>
+											<td valign="middle">
+												<table role="presentation" cellspacing="0" cellpadding="0" border="0"
+													width="100%">
+													<tr>
+														<td>
+															<img src="images/third.png" alt=""
+																style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;">
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											
+											<td valign="middle">
+												<table role="presentation" cellspacing="0" cellpadding="0" border="0"
+													width="100%">
+													<tr>
+														<td class="text-services"
+															style="text-align: left; padding: 20px 30px;">
+															<div class="heading-section">
+																<h2 style="font-size: 22px;">Dell Optiplex 5070MT</h2>
+
+																<li>Intel Core i5-9500 9th gen Processor</li>
+																<li>4GB DDR4 RAM</li>
+																<li>1TB SATA HDD</li>
+																<li>DVD RW</li>
+																<li>USB Keyboard and Mouse</li>
+																<li>Windows 10 pro OS</li>
+																<li>19" Monitor</li>
+																<li>3 Year Onsite Warranty</li>
+																<h3 class="price">Price: 48250 + 18% GST</h3>
+															</div>
+														</td>
+													</tr>
+												</table>
+											</td>
+
+										</tr>
+									</table>
+								</td>
+							</tr><!-- end: tr -->
+
+						</table>
+					</td>
+				</tr><!-- end:tr -->
+
+				<tr>
+					<td class="bg_white">
+						<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+							<tr>
+								<td class="bg_light email-section" style="padding: 0; width: 100%;">
+									<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+										<tr>
+											<td valign="middle">
+												<table role="presentation" cellspacing="0" cellpadding="0" border="0"
+													width="100%">
+													<tr>
+														<td valign="middle">
+															<table role="presentation" cellspacing="0" cellpadding="0" border="0"
+																width="100%">
+																<tr>
+																	<td>
+																		<img src="images/fifth.png" alt=""
+																			style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;">
+																	</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+													<tr>
+														<td class="text-services"
+															style="text-align: left; padding: 20px 30px;">
+															<div class="heading-section">
+																<h2 style="font-size: 22px;">Dell Vostro 3490 Laptop
+																</h2>
+
+																<li> Intel Core i5-10210U 10th gen Processor (6MB Cache,
+																	up
+																	to
+
+																	4.2 GHz)</li>
+																<li> 8GB DDR4 2666 MHz RAM</li>
+																<li> 256GB SSD</li>
+																<li> No ODD</li>
+																<li> Windows 10 Pro OS</li>
+																<li> 14" FHD Screen</li>
+																<li> 3-year Pro Support</li>
+																<li> Backpack</li>
+																<h3 class="price">Price: 51000 + 18% GST</h3>
+															</div>
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr><!-- end: tr -->
+
+						</table>
+					</td>
+				</tr><!-- end:tr -->
+
 			</table>
 
 			<!-- contact info -->
@@ -477,7 +869,7 @@
 															<div class="heading-section">
 																<!-- <h2 style="font-size: 22px;visibility: hidden;">k</h2> -->
 																<p><a href="tel: +91 93421 22355">+919342122355</a></p>
-																<p><a href="tel: +91 93421 22355">+919342122355</a></p>
+																<p><a href="tel: +91 97397 57497">+919739757497</a></p>
 																<p><a href="tel: +91 96639 10996">+919663910996</a></p>
 																<!-- <p><a href="#" class="btn btn-primary">Shop now</a></p> -->
 															</div>
@@ -517,14 +909,10 @@
 						<table>
 							<tr style="text-align: left;">
 								<td valign="middle" width="60%" style="padding-top: 20px; text-align: left;">
-									<h5 style="padding-left: 20px;">#251/62, Aishwarya Towers, 9th Main, 43rd Cross,
+									<h5 style="padding-left: 20px; text-align: center;">#251/62, Aishwarya Towers, 9th Main, 43rd Cross,
 										Jayanagar 5th Block, Bangalore - 560041 </h5>
 								</td>
-								<td valign="middle" width="40%" style="padding-top: 20px 10px; text-align: right;">
-									<ul class="social">
-										<li><a href="tel:08041738665">08041738665</a></li>
-									</ul>
-								</td>
+								
 							</tr>
 						</table>
 					</td>
